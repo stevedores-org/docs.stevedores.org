@@ -11,7 +11,24 @@ services:
       - oxidized-mlx-docs
       - oxidized-rag-docs
       - oxidized-graph-docs
+      - aivcs-docs
+      - crossplane-heaven-docs
+      - data-fabric-docs
+      - devprod-ai-docs
+      - gitoxide-docs
+      - knittingcrab-docs
+      - libgit2-docs
+      - llama-cpp-docs
+      - local-ci-docs
+      - mlx-docs
+      - nix-cache-docs
+      - stevedores-org-docs
+      - ai-agent-agent-guides-docs
+      - ai-agent-ci-docs
+      - ai-agent-docs-docs
     restart: unless-stopped
+
+  # ─── Existing repos ─────────────────────────────────────────────────────
 
   # llama.rs docs
   llama-rs-docs:
@@ -41,6 +58,128 @@ services:
   oxidized-graph-docs:
     build:
       context: https://github.com/stevedores-org/oxidizedgraph.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ─── New repos ──────────────────────────────────────────────────────────
+
+  # aivcs docs
+  aivcs-docs:
+    build:
+      context: https://github.com/stevedores-org/aivcs.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # crossplane-heaven docs
+  crossplane-heaven-docs:
+    build:
+      context: https://github.com/stevedores-org/crossplane-heaven.git#master:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # data-fabric docs
+  data-fabric-docs:
+    build:
+      context: https://github.com/stevedores-org/data-fabric.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # DevProd-AI docs
+  devprod-ai-docs:
+    build:
+      context: https://github.com/stevedores-org/DevProd-AI.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # gitoxide docs
+  gitoxide-docs:
+    build:
+      context: https://github.com/stevedores-org/gitoxide.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # knittingCrab docs
+  knittingcrab-docs:
+    build:
+      context: https://github.com/stevedores-org/knittingCrab.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # libgit2 docs
+  libgit2-docs:
+    build:
+      context: https://github.com/stevedores-org/libgit2.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # llama.cpp docs
+  llama-cpp-docs:
+    build:
+      context: https://github.com/stevedores-org/llama.cpp.git#master:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # local-ci docs
+  local-ci-docs:
+    build:
+      context: https://github.com/stevedores-org/local-ci.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # mlx docs
+  mlx-docs:
+    build:
+      context: https://github.com/stevedores-org/mlx.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # nix-cache docs
+  nix-cache-docs:
+    build:
+      context: https://github.com/stevedores-org/nix-cache.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # stevedores.org docs
+  stevedores-org-docs:
+    build:
+      context: https://github.com/stevedores-org/stevedores.org.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ai-agent-agent-guides docs
+  ai-agent-agent-guides-docs:
+    build:
+      context: https://github.com/stevedores-org/ai-agent-agent-guides.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ai-agent-ci docs
+  ai-agent-ci-docs:
+    build:
+      context: https://github.com/stevedores-org/ai-agent-ci.git#main:docs-site
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ai-agent-docs docs
+  ai-agent-docs-docs:
+    build:
+      context: https://github.com/stevedores-org/ai-agent-docs.git#main:docs-site
     expose:
       - "80"
     restart: unless-stopped

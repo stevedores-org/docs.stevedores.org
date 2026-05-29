@@ -11,7 +11,24 @@ services:
       - oxidized-mlx-docs
       - oxidized-rag-docs
       - oxidized-graph-docs
+      - aivcs-docs
+      - crossplane-heaven-docs
+      - data-fabric-docs
+      - devprod-ai-docs
+      - gitoxide-docs
+      - knittingcrab-docs
+      - libgit2-docs
+      - llama-cpp-docs
+      - local-ci-docs
+      - mlx-docs
+      - nix-cache-docs
+      - stevedores-org-docs
+      - ai-agent-agent-guides-docs
+      - ai-agent-ci-docs
+      - ai-agent-docs-docs
     restart: unless-stopped
+
+  # ─── Existing repos ─────────────────────────────────────────────────────
 
   # llama.rs docs
   llama-rs-docs:
@@ -44,6 +61,143 @@ services:
   oxidized-graph-docs:
     build:
       context: ../oxidizedgraph/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ─── New repos ──────────────────────────────────────────────────────────
+
+  # aivcs docs
+  aivcs-docs:
+    build:
+      context: ../aivcs/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # crossplane-heaven docs
+  crossplane-heaven-docs:
+    build:
+      context: ../crossplane-heaven/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # data-fabric docs
+  data-fabric-docs:
+    build:
+      context: ../data-fabric/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # DevProd-AI docs
+  devprod-ai-docs:
+    build:
+      context: ../DevProd-AI/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # gitoxide docs
+  gitoxide-docs:
+    build:
+      context: ../gitoxide/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # knittingCrab docs
+  knittingcrab-docs:
+    build:
+      context: ../knittingCrab/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # libgit2 docs
+  libgit2-docs:
+    build:
+      context: ../libgit2/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # llama.cpp docs
+  llama-cpp-docs:
+    build:
+      context: ../llama.cpp/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # local-ci docs
+  local-ci-docs:
+    build:
+      context: ../local-ci/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # mlx docs
+  mlx-docs:
+    build:
+      context: ../mlx/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # nix-cache docs
+  nix-cache-docs:
+    build:
+      context: ../nix-cache/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # stevedores.org docs
+  stevedores-org-docs:
+    build:
+      context: ../stevedores.org/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ai-agent-agent-guides docs
+  ai-agent-agent-guides-docs:
+    build:
+      context: ../ai-agent-agent-guides/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ai-agent-ci docs
+  ai-agent-ci-docs:
+    build:
+      context: ../ai-agent-ci/docs-site
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    restart: unless-stopped
+
+  # ai-agent-docs docs
+  ai-agent-docs-docs:
+    build:
+      context: ../ai-agent-docs/docs-site
       dockerfile: Dockerfile
     expose:
       - "80"
